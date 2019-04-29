@@ -67,6 +67,7 @@ export default class Requests extends React.Component {
 								<a href={`https://www.google.com/maps/@${item.location.lat},${item.location.long}z`} target="_blank" rel="noopener noreferrer">
 									<i className="fa fa-map-marker-alt" />
 								</a>
+								{` ${item.location.address}`}
 							</td>
 						</tr>
 					})}

@@ -16,7 +16,7 @@ export default function Dashboard() {
 				</div>
 				<div className="col-lg-6">
 					<iframe title="chart" width="100%" height="500" frameBorder="0" scrolling="no"
-					        src="//plot.ly/~lamhoangtung/18.embed"></iframe>
+					        src="//plot.ly/~lamhoangtung/12.embed"></iframe>
 				</div>
 			</div>
 		</div>
