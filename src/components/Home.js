@@ -4,6 +4,7 @@ import styled from 'styled-components'
 import Announcement from './Announcement'
 import Dashboard from './Dashboard'
 import Requests from './Requests'
+import Timeline from './Timeline'
 
 const StyledHome = styled.div`
 	display: flex;
@@ -107,8 +108,6 @@ const StyledNav = styled.nav`
 		height: 70px;
 		padding: 0 30px;
 		font-weight: 600;
-		letter-spacing: 0.04em;
-		text-decoration: none;
 		flex-flow: column;
 		justify-content: center;
 		color: white;
@@ -125,9 +124,11 @@ const StyledNav = styled.nav`
 		&, & * {
 			cursor: pointer;
 			transition: all 300ms ease;
+			text-decoration: none !important;
 		}
 		&:hover {
 			background-color: #1c1c1c;
+		color: white;
 		}
 		&.selected {
 			background-color: #141414;
@@ -135,12 +136,13 @@ const StyledNav = styled.nav`
 				color: white;
 			}
 		}
-		
+		label {
+			margin: 0;
+		}
 		span {
 			font-size: 11px;
 			color: #838383;
 			font-weight: 400;
-			line-height: 2em;
 		}
 	}
 `
@@ -177,11 +179,13 @@ function HomeScreen() {
 			<StyledLink to="/dashboard" title="Dashboard" desc="Maps & Number"/>
 			<StyledLink to="/requests" title="Requests" desc="Hear from victims"/>
 			<StyledLink to="/announcement" title="Announcement" desc="Broadcast messages"/>
+			<StyledLink to="/timeline" title="Timeline" desc="Event timeline"/>
 		</StyledNav>
 		<StyledMain>
 			<Router>
 				<Dashboard path="/dashboard"/>
 				<Requests path="/requests"/>
+				<Timeline path="/timeline"/>
 				<Announcement path="/announcement"/>
 			</Router>
 		</StyledMain>
