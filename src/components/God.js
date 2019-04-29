@@ -1,7 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
 
-
 const StyledButton = styled.a`
 	display: inline-flex;
 	align-items: center;
@@ -14,14 +13,13 @@ const StyledButton = styled.a`
 	font-weight: bold;
 	border-radius: 10px;
 	cursor: pointer;
+	transition: all 300ms ease;
 	
 	&:hover {
 		box-shadow: 0 0 20px rgba(255,255,255,0.5), inset 0 0 20px rgba(255,255,255,0.5);
 		text-shadow: 0 0 10px rgba(255,255,255,0.5);
 	}
 `
-
-
 const StyledGod = styled.div`
 	position: absolute;
 	top: 0;
@@ -34,11 +32,12 @@ const StyledGod = styled.div`
 	align-items: center;
 	color: white;
 `
-
 export default function God() {
-	return <StyledGod>
-		<StyledButton>Tsunami</StyledButton>
-		<StyledButton>Huricane</StyledButton>
-		<StyledButton>Earth Quake</StyledButton>
-	</StyledGod>
+	return (
+		<StyledGod>
+			<StyledButton>Tsunami</StyledButton>
+			<StyledButton>Huricane</StyledButton>
+			<StyledButton>Earth Quake</StyledButton>
+		</StyledGod>
+	)
 }

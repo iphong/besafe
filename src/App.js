@@ -7,7 +7,7 @@ import Home from './components/Home'
 function App() {
 	return (
 		<Router>
-			<Home path="/" />
+			<Home path="/*" />
 			<God path="/god" />
 		</Router>
 	)
