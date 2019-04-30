@@ -176,14 +176,14 @@ const StyledLoginBox = styled.div`
 function HomeScreen() {
 	return <StyledLayout>
 		<StyledNav>
-			<StyledLink to="/dashboard" title="Dashboard" desc="Maps & Number"/>
+			<StyledLink to="/" title="Dashboard" desc="Maps & Number"/>
 			<StyledLink to="/requests" title="Requests" desc="Hear from victims"/>
 			<StyledLink to="/announcement" title="Announcement" desc="Broadcast messages"/>
 			<StyledLink to="/timeline" title="Timeline" desc="Event timeline"/>
 		</StyledNav>
 		<StyledMain>
 			<Router>
-				<Dashboard path="/dashboard"/>
+				<Dashboard path="/"/>
 				<Requests path="/requests"/>
 				<Timeline path="/timeline"/>
 				<Announcement path="/announcement"/>
